@@ -6,8 +6,10 @@
    domain, scheme, or port) other than its own from which a browser should permit loading resources.
 4. Express: ```Express``` provides a thin layer of fundamental web application features, without obscuring Node.js
    features that you know and love.
+   - Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
 5. ```mongoose``` to create models for the posts. Mongoose is a MongoDB object modeling tool designed to work in an
    asynchronous environment. Mongoose supports both promises and callbacks
 6. nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when
    file changes in the directory are detected.
 7. ```"type":"module"``` when you have this in the ```package.json``` file, your source code should use ```import``` syntax. When you don't have, you should use ```require``` syntax.
+8. In Node.js, when import a ```js``` file, we need to add the extension  ```.js or .ts```
