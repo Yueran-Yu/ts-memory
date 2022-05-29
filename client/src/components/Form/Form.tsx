@@ -1,11 +1,11 @@
 import React from 'react'
 
-const FormFile = () => {
+const Form = () => {
 	return (
 		<form>
-
+			from
 		</form>
 	)
 }
 
-export default FormFile
+export default Form
