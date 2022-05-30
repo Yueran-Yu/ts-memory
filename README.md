@@ -13,3 +13,7 @@
    file changes in the directory are detected.
 7. ```"type":"module"``` when you have this in the ```package.json``` file, your source code should use ```import``` syntax. When you don't have, you should use ```require``` syntax.
 8. In Node.js, when import a ```js``` file, we need to add the extension  ```.js or .ts```
+9. The ```state``` type of ```rootReducer``` when using redux: ``` export type RootState = ReturnType<typeof rootReducer>;```, when using redux-toolkit, the ```root state``` type is ```export type RootState = ReturnType<typeof store.getState>```
+
+
+
