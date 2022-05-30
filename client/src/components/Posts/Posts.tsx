@@ -8,6 +8,7 @@ import {RootState} from "../../index"
 const Posts = () => {
 	const classes = useStyles()
 	const posts = useSelector((state: RootState) => state.posts)
+
 	return (
 		<>
 			<h1>Posts</h1>
