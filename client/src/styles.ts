@@ -10,7 +10,8 @@ export default makeStyles(() => ({
 		alignItems: 'center',
 	},
 	heading: {
-		color: '#A0BCC2',
+		color: '#1572A1',
+		fontFamily: "'Permanent Marker', cursive"
 	},
 	image: {
 		marginLeft: '15px',
