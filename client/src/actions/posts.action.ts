@@ -15,3 +15,14 @@ export const getPosts = () => async (dispatch: AppDispatch) => {
 		console.log((error as Error).message)
 	}
 }
+
+// dispatch comes from redux-thunk
+export const createPost = (post: PostType) => async (dispatch: AppDispatch) => {
+	try {
+		// make a post request to our backend server
+		const {data} = await api.createPost(post)
+		dispatch({type: "CREATE", payload: data})
+	} catch (error) {
+		console.log((error as Error).message)
+	}
+}
