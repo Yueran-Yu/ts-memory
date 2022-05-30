@@ -1,6 +1,6 @@
 import {MAction} from "../actions/posts.action"
 
-export const posts = (state = [], action: MAction) => {
+export const postsReducer = (state = [], action: MAction) => {
 	switch (action.type) {
 		case "FETCH_ALL":
 			return action.payload

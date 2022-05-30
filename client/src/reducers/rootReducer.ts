@@ -1,10 +1,9 @@
 import {combineReducers} from "redux"
-import {posts} from "./posts"
+import {postsReducer} from "./posts.reducer"
 
 
 export const rootReducer = combineReducers({
-	posts
+	posts: postsReducer
 })
 
 
-export type RootState = ReturnType<typeof rootReducer>

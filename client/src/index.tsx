@@ -11,7 +11,7 @@ import {rootReducer} from "./reducers/rootReducer"
 const store = configureStore({reducer: rootReducer, middleware: [thunk]})
 export type State = typeof store
 export type AppDispatch = ThunkDispatch<State, any, AnyAction>
-
+export type RootState = ReturnType<typeof store.getState>
 
 ReactDOM.render(
 	<React.StrictMode>

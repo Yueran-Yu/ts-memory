@@ -2,11 +2,12 @@ import React from 'react'
 import Post from "./Post/Post"
 import {useSelector} from "react-redux"
 import useStyles from "../../styles"
-import {RootState} from "../../reducers/rootReducer"
+import {RootState} from "../../index"
+
 
 const Posts = () => {
 	const classes = useStyles()
-	const posts = useSelector((state:RootState) => state.posts)
+	const posts = useSelector((state: RootState) => state.posts)
 	return (
 		<>
 			<h1>Posts</h1>
