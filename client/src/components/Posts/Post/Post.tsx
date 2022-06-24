@@ -1,14 +1,44 @@
-import React from 'react'
-// import useStyles from "../../../styles"
+import React from 'react';
+import {Card, CardActions, CardContent, CardMedia, Button, Typography} from "@material-ui/core";
+import ThumbUpAllIcon from "@material-ui/icons/ThumbUpAltOutlined";
+import DeleteIcon from "@material-ui/icons/Delete";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import useStyles from './post.styles';
+import monent from 'moment';
 
-const Post = () => {
-	// const classes = useStyles()
+
+export const Post = ({ post }: {post:PostType}) => {
+	const classes = useStyles()
+
 
 	return (
-		<div>
-			post
-		</div>
+		<Card className={classes.card}>
+			<CardMedia className={classes.media} image={post.selectedFile} title={post.title}/>
+			<div className={classes.overlay}>
+				<Typography variant='h6'>	{post.creator} </Typography>
+				<Typography variant='body2'>{ monent(post.createdAt?.type).fromNow()}</Typography>
+			</div>
+			<div className={classes.overlay2}>
+				<Button style={{color: 'white'}} size='small' onClick={()=>{}}>
+					<MoreHorizIcon fontSize='default'/>
+				</Button>
+			</div>
+			<div className={classes.details}>
+		 	<Typography variant='body2' color='textSecondary'>	{post.tags.map(tag=> `#${tag}`)}</Typography>
+			</div>
+			<CardContent>
+			<Typography className={classes.title} variant='h5' gutterBottom>{post.message}</Typography>
+			</CardContent>
+			<CardActions>
+				<Button size='small' color='primary' onClick={()=>{}}><ThumbUpAllIcon fontSize='small'/>
+				Like
+				{post.likeCount}
+				</Button>
+				<Button size='small' color='primary' onClick={()=>{}}><DeleteIcon fontSize='small'/>
+				Delete
+				</Button>
+			</CardActions>
+		</Card>
 	)
 }
 
-export default Post

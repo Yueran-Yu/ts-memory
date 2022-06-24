@@ -9,6 +9,7 @@ interface CreatedAtType {
 }
 
 interface PostType {
+	id: number,
 	title: string,
 	message: string,
 	creator: string,

@@ -9,6 +9,7 @@ import {AppDispatch} from "../../index"
 const Form = () => {
 	const dispatch = useDispatch<AppDispatch>()
 	const [postData, setPostData] = useState<PostType>({
+		id: 0,
 		title: "",
 		message: "",
 		creator: "",
